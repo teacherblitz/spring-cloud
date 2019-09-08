@@ -1,0 +1,19 @@
+# tomcat 端口
+server:
+  port: 9090
+
+spring:
+  application:
+    # 应用名
+    name: eureka-server
+
+eureka:
+  instance:
+    appname: localhost
+  client:
+    # 表示是否从Eureka Server获取注册信息，默认true
+    fetch-registry: false
+    # 表示是否将自己注册到Eureka Server，默认true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.appname}:${server.port}/eureka/
