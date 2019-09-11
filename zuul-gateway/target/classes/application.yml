@@ -1,0 +1,13 @@
+# tomcat 端口
+server:
+  port: 9091
+
+# 服务名称
+spring:
+  application:
+    name: zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka/

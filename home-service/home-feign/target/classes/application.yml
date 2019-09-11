@@ -1,0 +1,23 @@
+# tomcat端口
+server:
+  port: 9093
+  servlet:
+    context-path: /home-feign
+
+spring:
+  # 开启判断是否存在相同的bean覆盖
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: home-feign
+
+# eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka/
+
+# 开启熔断器配置
+feign:
+  hystrix:
+    enabled: true
